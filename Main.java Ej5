@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main{
+    public static void main (String[] args){
+        Scanner sc = new Scanner(System.in);
+        Pedidos pedido1 = new Pedidos();
+
+        System.out.println("Cliente: ");
+        pedido1.nombre = sc.nextLine();
+
+        System.out.println("Plato: ");
+        pedido1.plato=sc.nextLine();
+
+        System.out.println("Precio: ");
+        pedido1.precio=sc.nextDouble();
+
+        System.out.println("Cantidad: ");
+        pedido1.cantidad=sc.nextInt();
+
+        System.out.println();
+        pedido1.mostrarPedido();
+
+        sc.close();
+
+    }
+}
