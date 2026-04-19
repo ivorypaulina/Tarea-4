@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+
+        PlanillaLuz cliente1 = new PlanillaLuz();
+
+        System.out.println("Nombre del cliente: ");
+        cliente1.nombre= sc.nextLine();
+
+        System.out.println("Consumo: ");
+        cliente1.consumo= sc.nextDouble();
+
+        System.out.println("Costo por kW: ");
+        cliente1.costokW=sc.nextDouble();
+
+        System.out.println();
+        cliente1.mostrarPlanilla();
+        sc.close();
+    }
+}
