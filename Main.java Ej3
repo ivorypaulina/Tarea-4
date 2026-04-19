@@ -1,0 +1,7 @@
+public class Main{
+    public static void main (String[] args){
+        Calificacion calificacion1 = new Calificacion();
+        calificacion1.registrarNotas();
+        calificacion1.mostrarInformacion();
+    }
+}
