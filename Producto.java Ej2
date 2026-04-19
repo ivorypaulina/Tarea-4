@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Producto {
+    String nombre;
+    double precio;
+    int cantidad;
+
+    Scanner sc = new Scanner(System.in);
+    public void registrarProducto(){
+        System.out.println("Ingrese nombre del producto: ");
+        nombre= sc.nextLine();
+
+        System.out.println("Precio: ");
+        precio= sc.nextDouble();
+
+        System.out.println("Cantidad: ");
+        cantidad= sc.nextInt();
+    }
+
+
+    public void mostrarFactura(){
+        System.out.println("----------FACTURA----------");
+        System.out.println("Producto: "+nombre);
+        System.out.println("Precio unitario: "+precio);
+        System.out.println("Cantidad: "+cantidad);
+        System.out.print("Total a pagar: "+ (precio * cantidad));
+    }
+}
