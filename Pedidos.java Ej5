@@ -1,0 +1,32 @@
+public class Pedidos {
+    String nombre;
+    String plato;
+    double precio;
+    int cantidad;
+
+    double subtotal(){
+        return precio * cantidad;
+    }
+
+    double descuento(){
+        if (subtotal()>=25){
+            return subtotal() * 0.10;
+        }else{
+            return 0;
+        }
+    }
+
+    double total(){
+        return subtotal() - descuento();
+    }
+
+    public void mostrarPedido(){
+        System.out.println("Cliente: "+nombre);
+        System.out.println("Plato: "+plato);
+        System.out.println("Precio: "+ precio);
+        System.out.println("Cantidad: "+ cantidad);
+        System.out.printf("Subtotal: %.2f\n",subtotal());
+        System.out.printf("Descuento: %.2f\n",descuento());
+        System.out.printf("Total final: %.2f\n", total());
+    }
+}
