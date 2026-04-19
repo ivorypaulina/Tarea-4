@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+
+        Empleado empleado1 = new Empleado();
+
+        System.out.println("Nombre: ");
+        empleado1.nombre= sc.nextLine();
+
+        System.out.println("Horas trabajadas: ");
+        empleado1.horas=sc.nextDouble();
+
+        System.out.println("Pago por hora: ");
+        empleado1.pagoHora=sc.nextDouble();
+
+        System.out.println();
+        empleado1.mostrarReporte();
+
+        sc.close();
+    }
+}
