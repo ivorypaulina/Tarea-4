@@ -1,0 +1,29 @@
+public class Empleado {
+    String nombre;
+    double horas;
+    double pagoHora;
+
+    double sueldoBase(){
+        return horas * pagoHora;
+    }
+
+    double bono(){
+        if(sueldoBase() >= 480){
+            return 20;
+        }else{
+            return 0;
+        }
+    }
+
+    double total(){
+        return sueldoBase() + bono();
+    }
+
+    public void mostrarReporte() {
+        System.out.println("----------- REPORTE DE EMPLEADO -----------");
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Sueldo base: " + sueldoBase());
+        System.out.println("Bono: " + bono());
+        System.out.println("Sueldo final: " + total());
+    }
+}
